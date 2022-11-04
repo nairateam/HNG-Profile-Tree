@@ -1,13 +1,15 @@
-import Links from './Links';
-import Profile from './Profile';
-import Footer from './Footer'
+import { Route, Routes } from "react-router-dom";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
-      <Profile />
-      <Links />
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
+
     </div>
   );
 }
